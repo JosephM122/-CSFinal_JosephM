@@ -1,0 +1,21 @@
+import random
+
+num = random.randint(0, 100)
+print(f'''
+---------------------------
+Correct answer: {num}
+---------------------------
+''')
+   
+playerInput = int(input('Enter A Number Between 0 and 100: '))
+if playerInput == num:
+        msg = 'You Won!'
+        break
+elif playerInput > num:
+    print(f'{playerInput} is too high.'
+        
+else:
+    playerInput < num:
+    print(f'{playerInput} is too low.'
+    
+print(msg)
