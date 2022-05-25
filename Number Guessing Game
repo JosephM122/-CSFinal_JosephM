@@ -1,21 +1,20 @@
 import random
-
 num = random.randint(0, 100)
-print(f'''
----------------------------
-Correct answer: {num}
----------------------------
-''')
-   
-playerInput = int(input('Enter A Number Between 0 and 100: '))
-if playerInput == num:
-        msg = 'You Won!'
+msg = ''
+attempt = 1
+while attempt >= 0:
+    playerInput = int(input('Guess A Number Between 0 and 100: '))
+    if playerInput == num:
+        msg = 'You Win!'
+        totalAttempts = f'Total Attempts: {attempt}'
+        attempt += 1
         break
-elif playerInput > num:
-    print(f'{playerInput} is too high.'
-        
-else:
-    playerInput < num:
-    print(f'{playerInput} is too low.'
-    
+    elif playerInput > num:
+        print(f'{playerInput} is greater.')
+        attempt += 1
+    else:
+        playerInput < num
+        print(f'{playerInput} is smaller.')
+        attempt += 1
 print(msg)
+print(totalAttempts)
