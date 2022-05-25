@@ -10,11 +10,11 @@ while attempt >= 0:
         attempt += 1
         break
     elif playerInput > num:
-        print(f'{playerInput} is greater.')
+        print(f'{playerInput} is too high.')
         attempt += 1
     else:
         playerInput < num
-        print(f'{playerInput} is smaller.')
+        print(f'{playerInput} is too low.')
         attempt += 1
 print(msg)
 print(totalAttempts)
