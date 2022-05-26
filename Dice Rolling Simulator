@@ -1,0 +1,16 @@
+import random
+def rollDice(numDice):
+    rollResults = []
+    for _ in range(numDice):
+        roll = random.randint(1, 6)
+        rollResults.append(roll)
+    return rollResults
+def parseInput(inputString):
+    if inputString.strip() in {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"}:
+        return int(inputString)
+    else:
+        print("Make sure you entered a number from 1-10.")
+numDiceInput = input("Enter the number of dice you want to roll: [1-10] ")
+numDice = parseInput(numDiceInput)
+rollResults = rollDice(numDice)
+print(rollResults)
